@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+ .top_padding {
+  padding-top: 100px;
+}
+.hover-img {
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.1);
+    z-index: 10;
+  }
+}
