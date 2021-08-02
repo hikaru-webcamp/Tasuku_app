@@ -22,7 +22,7 @@ ToDoタスク管理アプリになります。
 # 使用方法
 
 ```
-$ git clone 
+$ git clone git@github.com:hikaru-webcamp/Tasuku_app.git
 $ bundle install
 $ rails db:migrate
 $ rails db:seed
