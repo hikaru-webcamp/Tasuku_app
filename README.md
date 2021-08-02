@@ -1,24 +1,30 @@
-# README
+# アプリ概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ToDoタスク管理アプリになります。
 
-Things you may want to cover:
+![スクリーンショット 2021-08-02 17 34 47](https://user-images.githubusercontent.com/79980351/127834259-8d4741da-a565-41cb-bf9f-c17cc417e1e0.png)
 
-* Ruby version
 
-* System dependencies
+# 作成背景
 
-* Configuration
+普段使用しているタスク管理アプリがどのように作られているか疑問に思い、学習として作成しました。 <br>
 
-* Database creation
 
-* Database initialization
+# 実装機能
 
-* How to run the test suite
+|  | 機能 | gem / 備考  |
+|:---:|:---|:---|
+| 1 | ユーザーログイン機能 |devise |
+| ２ | TODO一覧機能
+| 3 | CRUD機能
+| 4 | レスポンシブ対応 | Bootstrap |
 
-* Services (job queues, cache servers, search engines, etc.)
+# 使用方法
 
-* Deployment instructions
-
-* ...
+```
+$ git clone git@github.com:RyoKitatani/library_app.git
+$ bundle install
+$ rails db:migrate
+$ rails db:seed
+$ rails s
+```
