@@ -1,0 +1,39 @@
+  <div class="container-fluid p-3 ">
+    <div class="col-sm-4 mx-auto text-center"><%= render "shared/flash_message" %></div>
+    <h3 class="text-dark font-italic text-center m-4">タスク管理</h3>
+    <div class='row mx-auto fadeUp'>
+      <% @lists.each do |list| %>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+          <div class="mb-4 card-deck">
+            <div class="card text-white border-dark mb-3 bg-dark" >
+              <h3 class="card-title font-weight-bold text-center m-1"><%= list.title %></h3>
+              <span class="text-right mr-3">
+                <%= link_to edit_list_path(current_user.id), class: "hover-img m-1 fa-2x text-reset text-decoration-none" do %>
+                 <i class="far fa-edit modal-fullscreen-xl-down hover-img"></i>
+                <% end %>
+                <%= link_to list_path(current_user.id), method: :delete, data: { confirm: "本当に投稿を消しますか？" }, class: "hover-img m-1 fa-2x text-reset text-decoration-none" do %>
+                 <i class="far fa-trash-alt"></i>
+                <% end %>
+              </span>
+              <div class="card-body">
+              <% list.cards.each do |card| %>
+                <div class="card m-2 text-dark">
+                <%= link_to list_card_path(list.id, card.id), class: "m-1 text-reset text-decoration-none" do %>
+                  <h5 class="card_title"><%= card.title %></h5>
+                  <% if card.memo.size > 0 %>
+                    <div class="card_detail is-exist"><i class="fas fa-bars"></i></div>
+                  <% end %>
+                <% end %>
+                </div>
+              <% end %>
+              </div>
+              <div class="card-body">
+                <i class="far fa-plus-square"></i>
+                <%= link_to "さらにカードを追加", new_list_card_path(list), class: "addCard_link" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
