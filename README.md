@@ -22,7 +22,7 @@ ToDoタスク管理アプリになります。
 # 使用方法
 
 ```
-$ git clone git@github.com:RyoKitatani/library_app.git
+$ git clone 
 $ bundle install
 $ rails db:migrate
 $ rails db:seed
